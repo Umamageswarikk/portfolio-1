@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photo_480x534.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="paragraph">
+                        I am Uma Mageswari K.K <br>I'm a student of Christ University, Banglore. <br>I want to pursue my career in field of IT.<br>
+                    </p> 
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('Achievements')">Achievements</p>
+                    </div> 
+                    <div class="tab-contents" id="Hobbies">
+                        <ul>
+                            <li><span>Drawing</span><br>Pencil Shading and Sketching</li>
+                            <li><span>Dancing</span><br>Classical Dancer</li>
+                            <li><span>Extra curricular activities</span><br>Ncc-Airwing cadet</li>
+                        </ul>    
+                  
+                    </div>  
+                
+                
+                
+                <div class="tab-contents active-tab" id="Achievements">
+                    <ul>
+                        <li><span>Ncc c-cert</span><br>A grade holder</li>
+                        <li><span>Topper - French</span><br>During BSc Physics at Madras Christian College</li>
+                        <li><span>School Topper</span><br>Physics in Higer Secondary</li>
+                        <li><span>Interschool</span><br>first prize in Interschool Glass Painting</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+            
+                
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+    </script>
+   
+    
+</body>
+</html>
